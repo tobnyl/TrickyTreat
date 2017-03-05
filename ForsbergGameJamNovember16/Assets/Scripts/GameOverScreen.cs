@@ -17,8 +17,6 @@ public class GameOverScreen : MonoBehaviour
 	
 	void Start() 
 	{
-        Debug.Log("Invoking LoadStartScreen...");
-
         Invoke("LoadStartScreen", 8);
     }
 
@@ -30,8 +28,7 @@ public class GameOverScreen : MonoBehaviour
 	#region Methods
 	
 	void LoadStartScreen()
-    {
-        Debug.Log("Loading StartScreen...");
+    {        
         SceneManager.LoadScene("MainMenu");
     }
 	

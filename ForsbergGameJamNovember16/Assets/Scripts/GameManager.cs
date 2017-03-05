@@ -56,9 +56,7 @@ public class GameManager : MonoBehaviour
         {
             _instance = GetComponent<GameManager>();
         }
-
         
-
         _currentTime = GameLengthInSeconds;
     }
 

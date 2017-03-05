@@ -38,8 +38,6 @@ public class UIManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        DontDestroyOnLoad(transform.gameObject);
-
     }
 
     // Update is called once per frame
@@ -53,26 +51,29 @@ public class UIManager : MonoBehaviour
 
     public void GameOverScreen()
     {
-        GameOverScreenImage.gameObject.SetActive(true);
-
-        if (Player1.Score == Player2.Score)
+        if (!GameOverScreenImage.gameObject.activeSelf)
         {
-            TiedText.gameObject.SetActive(true);
-            
-        }
-        else if (Player1.Score > Player2.Score)
-        {
-            Player1Wins.gameObject.SetActive(true);
-        }
-        else
-        {
-            Player2Wins.gameObject.SetActive(true);
-        }
+            GameOverScreenImage.gameObject.SetActive(true);
 
-        FinalScorePlayer1.text = Player1.Score.ToString();
-        FinalScorePlayer2.text = Player2.Score.ToString();
+            if (Player1.Score == Player2.Score)
+            {
+                TiedText.gameObject.SetActive(true);
 
-        IsGameOver = true;
+            }
+            else if (Player1.Score > Player2.Score)
+            {
+                Player1Wins.gameObject.SetActive(true);
+            }
+            else
+            {
+                Player2Wins.gameObject.SetActive(true);
+            }
+
+            FinalScorePlayer1.text = Player1.Score.ToString();
+            FinalScorePlayer2.text = Player2.Score.ToString();
+
+            IsGameOver = true;
+        }
 
         //Time.timeScale = 0;
     }
