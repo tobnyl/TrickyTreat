@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2f1e3f1881cafb64ab558131c15f6bae
+timeCreated: 1488722603
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Curly Coryphaeus
+  fontNames:
+  - Curly Coryphaeus
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

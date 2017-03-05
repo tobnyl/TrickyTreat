@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ded3a2b7bafff0348b13e2213e8c7d6d
+timeCreated: 1488721982
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SPOOKYHOUSE_
+  fontNames:
+  - SPOOKYHOUSE_
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
