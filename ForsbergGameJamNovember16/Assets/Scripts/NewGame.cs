@@ -16,7 +16,7 @@ public class NewGame : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("01");
+        SceneManager.LoadScene("NewGame");
     }
 	
 	#endregion
