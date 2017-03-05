@@ -25,6 +25,7 @@ public class StartGame : MonoBehaviour
 	{
 	    if (Input.anyKeyDown)
         {
+            UIManager.IsGameOver = false;
             SceneManager.LoadScene("01");
         }
 	}

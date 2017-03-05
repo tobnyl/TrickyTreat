@@ -46,23 +46,26 @@ public class Player : MonoBehaviour
 
 	void Update() 
 	{
-	    if (Input.GetKey(Left))
-	    {
-	        transform.Translate(new Vector3(-WalkSpeed, 0, 0) * Time.deltaTime);
-	        Model.transform.rotation = Quaternion.Euler(0, 180, 0);
-	    }
-        else if (Input.GetKey(Right))
+        if (!UIManager.IsGameOver)
         {
-            transform.Translate(new Vector3(WalkSpeed, 0, 0) * Time.deltaTime);
-            Model.transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
+            if (Input.GetKey(Left))
+            {
+                transform.Translate(new Vector3(-WalkSpeed, 0, 0) * Time.deltaTime);
+                Model.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else if (Input.GetKey(Right))
+            {
+                transform.Translate(new Vector3(WalkSpeed, 0, 0) * Time.deltaTime);
+                Model.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
 
-        HorizontalMovement();
+            HorizontalMovement();
+        }
 	}
 
     void OnTriggerEnter(Collider c)
     {
-        if (c.gameObject.layer == LayerMask.NameToLayer("Item"))
+        if (!UIManager.IsGameOver && c.gameObject.layer == LayerMask.NameToLayer("Item"))
         {
             if (c.gameObject.tag == "Candy")
             {                

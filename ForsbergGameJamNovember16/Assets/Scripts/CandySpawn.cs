@@ -23,7 +23,8 @@ public class CandySpawn : MonoBehaviour
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
-        while (true)
+
+        while (!UIManager.IsGameOver)
         {
             for (int i = 0; i < hazardCount; i++)
             {
@@ -43,11 +44,7 @@ public class CandySpawn : MonoBehaviour
             }
             yield return new WaitForSeconds(waveWait);
         }
-
-
     }
-
-
 }
 
 

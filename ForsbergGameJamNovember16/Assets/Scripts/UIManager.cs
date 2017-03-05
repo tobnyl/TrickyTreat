@@ -18,9 +18,10 @@ public class UIManager : MonoBehaviour
     public Text FinalScorePlayer1;
     public Text FinalScorePlayer2;
 
-    
-
     private static UIManager _instance;
+
+    public static bool IsGameOver { get; set; }
+
     public static UIManager Instance
     {
         get { return _instance; }
@@ -71,9 +72,9 @@ public class UIManager : MonoBehaviour
         FinalScorePlayer1.text = Player1.Score.ToString();
         FinalScorePlayer2.text = Player2.Score.ToString();
 
+        IsGameOver = true;
 
-
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
 }
 
